@@ -1,0 +1,33 @@
+{
+    "name": "opa-management-api",
+    "version": "1.0.0",
+    "description": "OPA management API built using ClaudiaJS",
+    "main": "bin/index",
+    "private": true,
+    "files": [
+        "bin/**/*.*",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "create": "tsc && claudia create --api-module bin/index --region ca-central-1 --policies policies",
+        "deploy:dev": "tsc && claudia update --version dev --set-env-from-json dev.json",
+        "deploy:prod": "tsc && claudia update --version prod --set-env-from-json prod.json",
+        "delete": "claudia destroy",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "NumericaIdeas Network",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.26.1",
+        "claudia-api-builder": "^4.1.2"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.21",
+        "claudia": "^5.14.0",
+        "typescript": "^4.6.2"
+    },
+    "optionalDependencies": {
+        "aws-sdk": "^2.1087.0"
+    }
+}
