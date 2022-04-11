@@ -34,3 +34,7 @@ Pushing recent changes
 $ npm run deploy:dev
 $ npm run deploy:prod
 ```
+
+Once deployed, the service will be accessible at:
+- https://xxxxxxxxxx.execute-api.ca-central-1.amazonaws.com/dev
+- https://xxxxxxxxxx.execute-api.ca-central-1.amazonaws.com/prod
