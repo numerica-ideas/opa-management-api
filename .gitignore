@@ -3,3 +3,4 @@ yarn-error.log
 bin
 dev.json
 prod.json
+.opa

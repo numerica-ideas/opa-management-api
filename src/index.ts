@@ -1,4 +1,4 @@
-import { ENV } from './config';
+import { STAGE } from './config';
 import { getPresignedUrl } from './s3Util';
 import ApiBuilder from 'claudia-api-builder';
 
@@ -9,7 +9,7 @@ api.get('/ping', (req) => {
 });
 
 api.get('/bundles/{branch}', async (req) => {
-  console.log('The env is: ' + ENV);
+  console.log('The stage is: ' + STAGE);
 
   const { branch = 'master' } = req.pathParams;
   console.log('The incoming branch is : ', branch);
